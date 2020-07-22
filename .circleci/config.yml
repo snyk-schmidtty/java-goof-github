@@ -9,6 +9,9 @@
         - checkout # check out the code in the project directory
         - run: echo "hello world" # run the `echo` command
         - run:
+            name: install npm
+            command: 'sudo apt install npm'
+        - run:
             name: update-npm
             command: 'sudo npm install -g snyk'
         - run: # installs json to html mapper
