@@ -12,6 +12,9 @@
             name: install nodejs
             command: 'sudo apt install -y nodejs'
         - run:
+            name: install npm
+            command: 'sudo apt install -y npm'            
+        - run:
             name: update-npm
             command: 'sudo npm install -g snyk'
         - run: # installs json to html mapper
