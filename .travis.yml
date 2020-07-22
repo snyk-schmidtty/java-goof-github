@@ -1,7 +1,5 @@
 language: java
 
-#cache: npm
-
 script:
     - npm install -g snyk
     - snyk monitor --reachable-vulns --all-projects
