@@ -8,7 +8,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@master
-        run: mvn install
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
         env:
