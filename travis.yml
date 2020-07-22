@@ -1,0 +1,7 @@
+language: java
+
+cache: npm
+
+script:
+    - snyk test --all-projects
+    - snyk monitor --project-name=goof-github-travisci
