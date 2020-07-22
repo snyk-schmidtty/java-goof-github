@@ -4,7 +4,7 @@
     build:
       working_directory: ~/java-goof-circleci
       docker: 
-        - image: circleci/node # the primary container, where your job's commands are run
+        - image: circleci/openjdk # the primary container, where your job's commands are run
       steps:
         - checkout # check out the code in the project directory
         - run: echo "hello world" # run the `echo` command
