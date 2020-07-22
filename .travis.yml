@@ -4,4 +4,4 @@ cache: npm
 
 script:
     - snyk test --all-projects
-    - snyk monitor --project-name=goof-github-travisci
+    - snyk monitor --project-name=java-goof-github-travisci
