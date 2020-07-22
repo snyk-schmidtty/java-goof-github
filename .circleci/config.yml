@@ -4,16 +4,16 @@
     build:
       working_directory: ~/java-goof-circleci
       docker: 
-        - image: circleci/openjdk # the primary container, where your job's commands are run
+        - image: circleci/node # the primary container, where your job's commands are run
       steps:
         - checkout # check out the code in the project directory
         - run: echo "hello world" # run the `echo` command
         - run:
-            name: install nodejs
-            command: 'sudo apt install -y nodejs'
+            name: install openjdk
+            command: 'sudo apt install -y openjdk-8-jdk'
         - run:
-            name: install npm
-            command: 'sudo apt install -y npm'            
+            name: install maven
+            command: 'sudo apt install -y maven'
         - run:
             name: update-npm
             command: 'sudo npm install -g snyk'
