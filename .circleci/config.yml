@@ -14,6 +14,9 @@
         - run:
             name: install maven
             command: 'sudo apt install -y maven'
+        -run:
+            name: mvn install
+            command: 'mvn install'
         - run:
             name: update-npm
             command: 'sudo npm install -g snyk'
@@ -26,7 +29,7 @@
             #command: snyk auth $SNYK_TOKEN
         - run: # run snyk monitor
             name: snyk monitor
-            command: 'snyk monitor --project-name=java-goof-circleci'
+            command: 'snyk monitor --reachable-vulns --project-name=java-goof-circleci'
         - run: # output to HTML
             name: snyk test to HTML
             command: 'snyk test --json | snyk-to-html -o results.html'
