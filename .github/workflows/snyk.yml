@@ -14,4 +14,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
-          args: --reachable-vulns --project-name=java-goof-github-actions
+          args: --project-name=java-goof-github-actions
