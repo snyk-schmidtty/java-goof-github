@@ -1,8 +1,8 @@
 language: java
 
-cache: npm
+#cache: npm
 
 script:
     - npm install -g snyk
-    - snyk test --all-projects
-    - snyk monitor --project-name=java-goof-github-travisci
+    - snyk monitor --reachable-vulns --all-projects
+    - snyk monitor --reachable-vulns --project-name=java-goof-github-travisci
