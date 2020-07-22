@@ -2,7 +2,7 @@
   version: 2
   jobs:
     build:
-      working_directory: ~/goof-circleci
+      working_directory: ~/java-goof-circleci
       docker: 
         - image: circleci/node # the primary container, where your job's commands are run
       steps:
