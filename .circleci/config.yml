@@ -10,6 +10,15 @@
         - run:
             name: update-npm
             command: 'sudo npm install -g snyk'
+        - run:
+            name: install-openjdk
+            command: 'sudo apt install -y openjdk-8-jdk'
+        - run:
+            name: install-mvn
+            command: 'sudo apt install -y maven'
+        - run:
+            name: mvn-install
+            command: 'mvn install'
         - run: # installs json to html mapper
             name: install-snyk-to-html
             command: 'sudo npm install -g snyk-to-html'
