@@ -3,9 +3,24 @@ name: GitHub Actions Snyk Scan
 on: [push]
 
 jobs:
-  build:
+  #snyk_scan_1:
+    #runs-on: ubuntu-latest
+    #steps:
+      #- uses: actions/checkout@master
+      #- name: Run Snyk to check for vulnerabilities
+        #uses: snyk/actions/maven@master
+        #env:
+          #SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
+        #with:
+          #command: monitor
+          #args: --all-projects --remote-repo-url=java-goof-github #--reachable --project-name=java-goof-github-actions
+  snyk_scan_2:
     runs-on: ubuntu-latest
     steps:
+      - name: Setup Java JDK
+        uses: actions/setup-java@v1.4.1
+        with:
+          java-version: 8
       - uses: actions/checkout@master
       - name: Run Snyk to check for vulnerabilities
         uses: snyk/actions/maven@master
@@ -13,15 +28,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
-          args: --all-projects --remote-repo-url=java-goof-github-actions #--reachable --project-name=java-goof-github-actions
-  snyk_scan_2:
-    runs-on: ubuntu-latest  
-    steps:
-      - uses: actions/checkout@master
-      - name: Run Snyk to check for vulnerabilities
-        uses: snyk/actions/maven@master
-        env:
-          SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
-        with:
-          command: monitor
-          args: --remote-repo-url=java-goof-github-actions --project-name=java-goof-github-actions # --reachable 
+          args: --remote-repo-url=java-goof-github --project-name=java-goof-github-actions # --reachable 
