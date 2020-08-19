@@ -2,5 +2,5 @@ language: java
 
 script:
     - npm install -g snyk
-    - snyk monitor --reachable-vulns --all-projects --remote-repo-url=java-goof-github-travisci
-    - snyk monitor --reachable-vulns --project-name=java-goof-github-travisci --remote-repo-url=java-goof-github-travisci
+    - snyk monitor --reachable-vulns --all-projects --remote-repo-url=java-goof-github
+    - snyk monitor --reachable-vulns --project-name=java-goof-github-travisci --remote-repo-url=java-goof-github
