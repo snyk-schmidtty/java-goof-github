@@ -28,6 +28,9 @@
         - run: #run snyk monitor
             name: snyk-monitor-1
             command: 'snyk monitor --all-projects --reachable-vulns --remote-repo-url=java-goof-github-circleci'
+        - run: #run snyk monitor
+            name: snyk-monitor-2
+            command: 'snyk monitor --reachable-vulns --project-name=java-goof-github-circleci --remote-repo-url=java-goof-github-circleci'
         #- run: # output to HTML
         #    name: snyk test to HTML
         #    command: 'snyk test --all-projects --reachable --json | snyk-to-html -o results.html'
