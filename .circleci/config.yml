@@ -1,7 +1,7 @@
   version: 2
   jobs:
     build:
-      working_directory: ~/java-goof-circleci
+      working_directory: ~/java-goof-github-circleci
       docker: 
         - image: circleci/node # the primary container, where your job's commands are run
       steps:
@@ -28,9 +28,9 @@
         - run: #run snyk monitor
             name: snyk-monitor-1
             command: 'snyk monitor --all-projects --reachable-vulns --remote-repo-url=java-goof-github-circleci'
-        - run: # output to HTML
-            name: snyk test to HTML
-            command: 'snyk test --all-projects --reachable --json | snyk-to-html -o results.html'
-        - store_artifacts:
-            path: results.html
-            destination: results.html
+        #- run: # output to HTML
+        #    name: snyk test to HTML
+        #    command: 'snyk test --all-projects --reachable --json | snyk-to-html -o results.html'
+        #- store_artifacts:
+        #    path: results.html
+        #    destination: results.html
