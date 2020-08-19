@@ -14,4 +14,4 @@ jobs:
           SNYK_TOKEN: ${{ secrets.SNYK_TOKEN }}
         with:
           command: monitor
-          args: --remote-repo-url=snyk-schmidtty/java-goof-github --project-name=java-goof-github-actions
+          args: --reachable --remote-repo-url=snyk-schmidtty/java-goof-github --project-name=java-goof-github-actions
