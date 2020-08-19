@@ -27,7 +27,7 @@
             command: snyk auth $SNYK_TOKEN
         - run: #run snyk monitor
             name: snyk-monitor-1
-            command: 'snyk monitor --all-projects --reachable-vulns' --remote-repo-url=java-goof-github-circleci'
+            command: 'snyk monitor --all-projects --reachable-vulns --remote-repo-url=java-goof-github-circleci'
         - run: # run snyk monitor
             name: snyk-monitor-2
             command: 'snyk monitor --reachable-vulns --project-name=java-goof-github-circleci'
