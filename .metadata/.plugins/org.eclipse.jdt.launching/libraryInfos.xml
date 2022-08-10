@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <libraryInfos>
-    <libraryInfo home="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home" version="1.8.0_265">
+    <libraryInfo home="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.2.v20220201-1208/jre" version="17.0.2"/>
+    <libraryInfo home="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home" version="1.8.0_292">
         <bootpath>
             <entry path="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/resources.jar"/>
             <entry path="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/rt.jar"/>
@@ -23,5 +24,6 @@
             <entry path="/Library/Java/JavaVirtualMachines/adoptopenjdk-8.jdk/Contents/Home/jre/lib/endorsed"/>
         </endorsedDirs>
     </libraryInfo>
-    <libraryInfo home="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home" version="11.0.8"/>
+    <libraryInfo home="/Library/Java/JavaVirtualMachines/adoptopenjdk-11.jdk/Contents/Home" version="11.0.11"/>
+    <libraryInfo home="/Applications/Eclipse.app/Contents/Eclipse/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_17.0.2.v20220201-1208" version="17.0.2"/>
 </libraryInfos>
